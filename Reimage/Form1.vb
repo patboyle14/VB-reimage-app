@@ -224,7 +224,7 @@ Public Class frmMain
                 'call copyfolder method
                 CopyFolder(strFullPath, strDestinationLocation)
                 'FileIO.FileSystem.CopyDirectory(strWhichDrive & strParentFolder, strDestinationLocation, True)
-                MessageBox.Show("Copied")
+                MessageBox.Show("All files copied")
             Catch ex As System.IO.DirectoryNotFoundException ' error catch
                 MessageBox.Show("Directory not found " + ex.Message) ' error catch output
             End Try
@@ -236,10 +236,25 @@ Public Class frmMain
         txtParentFolder.Enabled = Not txtParentFolder.Enabled
     End Sub
     Public Sub CopyFolder(ByVal SourceFolder As String, ByVal DestFolder As String)
+        'get amount of files in main directory
+        Dim xFilesCount = Directory.GetFiles(SourceFolder).Length
+        'counter for progress bar
+        Dim xFilesTransferred As Integer = 0
+        'copy files try method
         Try
             For Each item In FileIO.FileSystem.GetFiles(SourceFolder)
                 Try
+                    'say what file we're copying at the moment
+                    lblCurrentFile.Refresh()
+                    lblCurrentFile.Text = FileIO.FileSystem.GetName(item)
+                    'copy file
                     FileIO.FileSystem.CopyFile(item, DestFolder & "\" & FileIO.FileSystem.GetFileInfo(item).Name)
+                    'iterator to count files
+                    xFilesTransferred += 1
+
+                    'update progress bar
+                    ProgressBar1.Value = xFilesTransferred * 100 / xFilesCount
+                    ProgressBar1.Update()
                 Catch ex As Exception
 
                 End Try
@@ -248,6 +263,7 @@ Public Class frmMain
 
         End Try
 
+        'copy subfolders
         Try
             For Each SubFolder In FileIO.FileSystem.GetDirectories(SourceFolder)
                 CopyFolder(SubFolder, DestFolder & "\" & FileIO.FileSystem.GetDirectoryInfo(SubFolder).Name)
@@ -256,4 +272,5 @@ Public Class frmMain
 
         End Try
     End Sub
+
 End Class

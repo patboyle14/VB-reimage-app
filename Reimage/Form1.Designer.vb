@@ -37,6 +37,9 @@ Partial Class frmMain
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtParentFolder = New System.Windows.Forms.TextBox()
         Me.btnCopyMaster = New System.Windows.Forms.Button()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.lblCurrentFile = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Groupbox3.SuspendLayout()
@@ -102,9 +105,10 @@ Partial Class frmMain
         Me.GroupBox2.Controls.Add(Me.chkChrome)
         Me.GroupBox2.Controls.Add(Me.chkWallpaper)
         Me.GroupBox2.Controls.Add(Me.chkStickyNotes)
+        Me.GroupBox2.Controls.Add(Me.btnSwap)
         Me.GroupBox2.Location = New System.Drawing.Point(43, 189)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(200, 124)
+        Me.GroupBox2.Size = New System.Drawing.Size(214, 210)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Swap options"
@@ -141,11 +145,11 @@ Partial Class frmMain
         '
         'btnSwap
         '
-        Me.btnSwap.Location = New System.Drawing.Point(53, 337)
+        Me.btnSwap.Location = New System.Drawing.Point(19, 118)
         Me.btnSwap.Name = "btnSwap"
         Me.btnSwap.Size = New System.Drawing.Size(179, 62)
         Me.btnSwap.TabIndex = 2
-        Me.btnSwap.Text = "Copy swap options"
+        Me.btnSwap.Text = "Submit swap options"
         Me.btnSwap.UseVisualStyleBackColor = True
         '
         'Groupbox3
@@ -192,8 +196,32 @@ Partial Class frmMain
         Me.btnCopyMaster.Name = "btnCopyMaster"
         Me.btnCopyMaster.Size = New System.Drawing.Size(179, 54)
         Me.btnCopyMaster.TabIndex = 4
-        Me.btnCopyMaster.Text = "Copy all user files (reimage)"
+        Me.btnCopyMaster.Text = "Start reimage"
         Me.btnCopyMaster.UseVisualStyleBackColor = True
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(274, 360)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(336, 23)
+        Me.ProgressBar1.TabIndex = 5
+        '
+        'lblCurrentFile
+        '
+        Me.lblCurrentFile.AutoSize = True
+        Me.lblCurrentFile.Location = New System.Drawing.Point(455, 340)
+        Me.lblCurrentFile.Name = "lblCurrentFile"
+        Me.lblCurrentFile.Size = New System.Drawing.Size(0, 17)
+        Me.lblCurrentFile.TabIndex = 6
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(306, 340)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(122, 17)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Currently copying:"
         '
         'frmMain
         '
@@ -201,9 +229,11 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(615, 424)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblCurrentFile)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btnCopyMaster)
         Me.Controls.Add(Me.Groupbox3)
-        Me.Controls.Add(Me.btnSwap)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmMain"
@@ -216,6 +246,7 @@ Partial Class frmMain
         Me.Groupbox3.ResumeLayout(False)
         Me.Groupbox3.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -234,4 +265,7 @@ Partial Class frmMain
     Friend WithEvents txtParentFolder As TextBox
     Friend WithEvents btnCopyMaster As Button
     Friend WithEvents btnDifferentUser As Button
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents lblCurrentFile As Label
+    Friend WithEvents Label2 As Label
 End Class
