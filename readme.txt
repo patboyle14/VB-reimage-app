@@ -17,3 +17,4 @@
 #Updates v1.2 release 3/5/2018
 1. Completely revamped progress bar method - threw it on a second thread with BGW's
 2. Included more error checking for directories existing
+3. Updated 'main' splash form with logo & bryant info

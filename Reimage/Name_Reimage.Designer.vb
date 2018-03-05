@@ -179,7 +179,7 @@ Partial Class name_reimage
         Me.Controls.Add(Me.btnCopyMaster)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "name_reimage"
-        Me.Text = "Easy re-image v1.0"
+        Me.Text = "Easy re-image v1.2"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

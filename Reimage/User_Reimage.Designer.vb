@@ -256,7 +256,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Easy re-image"
+        Me.Text = "Easy re-image v1.2"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

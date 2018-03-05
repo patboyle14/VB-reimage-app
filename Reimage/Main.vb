@@ -9,12 +9,12 @@
         userReimage.Show()
     End Sub
 
-    Private Sub btnDebug_Click(sender As Object, e As EventArgs) Handles btnDebug.Click
+    Private Sub btnDebug_Click(sender As Object, e As EventArgs)
         Dim debugImage As New Debug_Form
         debugImage.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Dim debug2 As New debugUpdate
         debug2.Show()
     End Sub
