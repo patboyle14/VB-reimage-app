@@ -23,6 +23,7 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.radGDrive = New System.Windows.Forms.RadioButton()
         Me.radFDrive = New System.Windows.Forms.RadioButton()
@@ -242,7 +243,7 @@ Partial Class frmMain
         '
         'frmMain
         '
-        Me.AcceptButton = Me.btnSwap
+        Me.AcceptButton = Me.btnCopyMaster
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(595, 401)
@@ -254,6 +255,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.Groupbox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Easy re-image v1.2"

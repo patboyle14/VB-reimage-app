@@ -23,27 +23,18 @@ Partial Class Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnYoga370 = New System.Windows.Forms.Button()
         Me.btnOther = New System.Windows.Forms.Button()
         Me.lblUserInfo = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(189, 117)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(221, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "What type of copy are you doing?"
-        '
         'btnYoga370
         '
-        Me.btnYoga370.Location = New System.Drawing.Point(203, 225)
+        Me.btnYoga370.Location = New System.Drawing.Point(214, 225)
         Me.btnYoga370.Name = "btnYoga370"
         Me.btnYoga370.Size = New System.Drawing.Size(189, 47)
         Me.btnYoga370.TabIndex = 1
@@ -52,7 +43,7 @@ Partial Class Main
         '
         'btnOther
         '
-        Me.btnOther.Location = New System.Drawing.Point(203, 163)
+        Me.btnOther.Location = New System.Drawing.Point(214, 163)
         Me.btnOther.Name = "btnOther"
         Me.btnOther.Size = New System.Drawing.Size(189, 44)
         Me.btnOther.TabIndex = 2
@@ -64,7 +55,7 @@ Partial Class Main
         Me.lblUserInfo.AutoSize = True
         Me.lblUserInfo.BackColor = System.Drawing.SystemColors.Control
         Me.lblUserInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblUserInfo.Location = New System.Drawing.Point(39, 310)
+        Me.lblUserInfo.Location = New System.Drawing.Point(45, 310)
         Me.lblUserInfo.Name = "lblUserInfo"
         Me.lblUserInfo.Size = New System.Drawing.Size(577, 19)
         Me.lblUserInfo.TabIndex = 3
@@ -86,23 +77,34 @@ Partial Class Main
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(214, 352)
+        Me.PictureBox1.Location = New System.Drawing.Point(225, 352)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(219, 168)
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label1.Location = New System.Drawing.Point(155, 124)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(302, 20)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Where are you copying your data from?"
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(623, 523)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.lblUserInfo)
         Me.Controls.Add(Me.btnOther)
         Me.Controls.Add(Me.btnYoga370)
-        Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Main"
         Me.Text = "Easy re-image v1.2"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -110,11 +112,10 @@ Partial Class Main
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnYoga370 As Button
     Friend WithEvents btnOther As Button
     Friend WithEvents lblUserInfo As Label
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

@@ -18,4 +18,8 @@
         Dim debug2 As New debugUpdate
         debug2.Show()
     End Sub
+
+    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnOther.Focus()
+    End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class name_reimage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(name_reimage))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblFilesCopied = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
@@ -166,6 +167,7 @@ Partial Class name_reimage
         '
         'name_reimage
         '
+        Me.AcceptButton = Me.btnCopyMaster
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(755, 429)
@@ -178,6 +180,7 @@ Partial Class name_reimage
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btnCopyMaster)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "name_reimage"
         Me.Text = "Easy re-image v1.2"
         Me.GroupBox1.ResumeLayout(False)
