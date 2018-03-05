@@ -9,3 +9,7 @@ c:\users\student\documents\visual studio 2015\Projects\Reimage\Reimage\obj\Debug
 c:\users\student\documents\visual studio 2015\Projects\Reimage\Reimage\obj\Debug\Reimage.xml
 c:\users\student\documents\visual studio 2015\Projects\Reimage\Reimage\obj\Debug\Reimage.pdb
 C:\Users\student\Documents\Visual Studio 2015\Projects\Reimage\Reimage\obj\Debug\Reimage.vbprojResolveAssemblyReference.cache
+C:\Users\student\Documents\Visual Studio 2015\Projects\Reimage\Reimage\obj\Debug\Reimage.Debug_Form.resources
+C:\Users\student\Documents\Visual Studio 2015\Projects\Reimage\Reimage\obj\Debug\Reimage.Main.resources
+C:\Users\student\Documents\Visual Studio 2015\Projects\Reimage\Reimage\obj\Debug\Reimage.Name_Reimage.resources
+C:\Users\student\Documents\Visual Studio 2015\Projects\Reimage\Reimage\obj\Debug\Reimage.debugUpdate.resources

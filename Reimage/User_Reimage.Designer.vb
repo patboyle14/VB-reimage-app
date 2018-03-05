@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.radGDrive = New System.Windows.Forms.RadioButton()
         Me.radFDrive = New System.Windows.Forms.RadioButton()
@@ -38,8 +39,10 @@ Partial Class frmMain
         Me.txtParentFolder = New System.Windows.Forms.TextBox()
         Me.btnCopyMaster = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.lblCurrentFile = New System.Windows.Forms.Label()
+        Me.lblFilesCopied = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Timer_UserImage = New System.Windows.Forms.Timer(Me.components)
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Groupbox3.SuspendLayout()
@@ -108,7 +111,7 @@ Partial Class frmMain
         Me.GroupBox2.Controls.Add(Me.btnSwap)
         Me.GroupBox2.Location = New System.Drawing.Point(43, 189)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(214, 210)
+        Me.GroupBox2.Size = New System.Drawing.Size(214, 194)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Swap options"
@@ -147,9 +150,9 @@ Partial Class frmMain
         '
         Me.btnSwap.Location = New System.Drawing.Point(19, 118)
         Me.btnSwap.Name = "btnSwap"
-        Me.btnSwap.Size = New System.Drawing.Size(179, 62)
+        Me.btnSwap.Size = New System.Drawing.Size(181, 50)
         Me.btnSwap.TabIndex = 2
-        Me.btnSwap.Text = "Submit swap options"
+        Me.btnSwap.Text = "Copy ""swap options"""
         Me.btnSwap.UseVisualStyleBackColor = True
         '
         'Groupbox3
@@ -162,7 +165,7 @@ Partial Class frmMain
         Me.Groupbox3.Size = New System.Drawing.Size(222, 178)
         Me.Groupbox3.TabIndex = 3
         Me.Groupbox3.TabStop = False
-        Me.Groupbox3.Text = "Name of parent folder to copy"
+        Me.Groupbox3.Text = "Name of user to copy from"
         '
         'btnDifferentUser
         '
@@ -178,9 +181,9 @@ Partial Class frmMain
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(10, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(168, 17)
+        Me.Label1.Size = New System.Drawing.Size(169, 17)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Default: C:\Users\Student"
+        Me.Label1.Text = "Default: D:\Users\Student"
         '
         'txtParentFolder
         '
@@ -192,45 +195,60 @@ Partial Class frmMain
         '
         'btnCopyMaster
         '
-        Me.btnCopyMaster.Location = New System.Drawing.Point(361, 249)
+        Me.btnCopyMaster.Location = New System.Drawing.Point(357, 229)
         Me.btnCopyMaster.Name = "btnCopyMaster"
-        Me.btnCopyMaster.Size = New System.Drawing.Size(179, 54)
+        Me.btnCopyMaster.Size = New System.Drawing.Size(176, 39)
         Me.btnCopyMaster.TabIndex = 4
         Me.btnCopyMaster.Text = "Start reimage"
         Me.btnCopyMaster.UseVisualStyleBackColor = True
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(274, 360)
+        Me.ProgressBar1.Location = New System.Drawing.Point(263, 360)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(336, 23)
+        Me.ProgressBar1.Size = New System.Drawing.Size(303, 23)
         Me.ProgressBar1.TabIndex = 5
         '
-        'lblCurrentFile
+        'lblFilesCopied
         '
-        Me.lblCurrentFile.AutoSize = True
-        Me.lblCurrentFile.Location = New System.Drawing.Point(455, 340)
-        Me.lblCurrentFile.Name = "lblCurrentFile"
-        Me.lblCurrentFile.Size = New System.Drawing.Size(0, 17)
-        Me.lblCurrentFile.TabIndex = 6
+        Me.lblFilesCopied.AutoSize = True
+        Me.lblFilesCopied.Location = New System.Drawing.Point(434, 340)
+        Me.lblFilesCopied.Name = "lblFilesCopied"
+        Me.lblFilesCopied.Size = New System.Drawing.Size(0, 17)
+        Me.lblFilesCopied.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(306, 340)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 17)
+        Me.Label2.Size = New System.Drawing.Size(56, 17)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Currently copying:"
+        Me.Label2.Text = "Copied:"
+        '
+        'Timer_UserImage
+        '
+        Me.Timer_UserImage.Interval = 1000
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Enabled = False
+        Me.btnCancel.Location = New System.Drawing.Point(357, 286)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(176, 40)
+        Me.btnCancel.TabIndex = 8
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AcceptButton = Me.btnSwap
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(615, 424)
+        Me.ClientSize = New System.Drawing.Size(595, 401)
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.lblCurrentFile)
+        Me.Controls.Add(Me.lblFilesCopied)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btnCopyMaster)
         Me.Controls.Add(Me.Groupbox3)
@@ -266,6 +284,8 @@ Partial Class frmMain
     Friend WithEvents btnCopyMaster As Button
     Friend WithEvents btnDifferentUser As Button
     Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents lblCurrentFile As Label
+    Friend WithEvents lblFilesCopied As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Timer_UserImage As Timer
+    Friend WithEvents btnCancel As Button
 End Class

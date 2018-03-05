@@ -72,11 +72,35 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="debugUpdate.Designer.vb">
+      <DependentUpon>debugUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="debugUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Name_Reimage.Designer.vb">
+      <DependentUpon>Name_Reimage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Name_Reimage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Reimage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Reimage.Designer.vb">
+      <DependentUpon>User_Reimage.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debug_Form.Designer.vb">
+      <DependentUpon>Debug_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Debug_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,8 +120,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="debugUpdate.resx">
+      <DependentUpon>debugUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Name_Reimage.resx">
+      <DependentUpon>Name_Reimage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Reimage.resx">
+      <DependentUpon>User_Reimage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debug_Form.resx">
+      <DependentUpon>Debug_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
